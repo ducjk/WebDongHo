@@ -22,7 +22,7 @@
       <li class="active"><a href="admin">Trang chủ</a></li>
       
       <li><a href="loaiadmin">Quản lý loại</a></li>
-      <li><a href="hienthidonghoadmin">Quản lý sách</a></li>
+      <li><a href="hienthidonghoadmin">Quản lý đồng hồ</a></li>
       <li><a href="xacnhanadmin">Xác nhận</a></li>
       <li><a href="xacnhanchuyentienadmin">danh sách chuyển tiền</a></li>
     </ul>
@@ -34,7 +34,7 @@
        Login
        </a>
        <%}else{ %>
-       <a href="#">
+       <a href="" class="login">
 	      <span class="glyphicon glyphicon-log-in"></span>
 	       Hi: <%
 	       adminbean kh =(adminbean)session.getAttribute("admin");
@@ -46,10 +46,8 @@
     </ul>
   </div>
 </nav>
-  
-<table width="1000" align="center">
-
-  
-</table>
+<div>
+	<h1>Trang chủ admin</h1>
+</div>
 </body>
 </html>

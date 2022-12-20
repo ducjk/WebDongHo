@@ -35,7 +35,7 @@
       <li ><a href="admin">Trang chủ</a></li>
       
       <li class="active"><a href="loaiadmin">Quản lý loại</a></li>
-      <li><a href="hienthidonghoadmin">Quản lý sách</a></li>
+      <li><a href="hienthidonghoadmin">Quản lý đồng hồ</a></li>
       <li><a href="xacnhanadmin">Xác nhận</a></li>
       <li><a href="xacnhanchuyentienadmin">danh sách chuyển tiền</a></li>
     </ul>

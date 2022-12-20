@@ -67,6 +67,13 @@ public class htdongho extends HttpServlet {
 			dsdongho = dhbo.getdongho();
 		}
 		
+		if (request.getParameter("sortpopulla") != null) {
+		 	
+		 	dsdongho = dhbo.sortReverse(dsdongho);
+		}
+		else if (request.getParameter("sortreverse") != null) {
+			dsdongho = dhbo.sortPopulla(dsdongho);
+		}
 		session.setAttribute("dsdongho", dsdongho);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("htdongho.jsp");

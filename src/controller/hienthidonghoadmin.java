@@ -42,6 +42,9 @@ public class hienthidonghoadmin extends HttpServlet {
 		
 		loaibo lbo = new loaibo();
 		ArrayList<loaibean> dsloai = lbo.getloai();
+		if (request.getAttribute("thanhcong") != null) {
+			request.setAttribute("themdonghothanhcong", "true");
+		}
 		request.setAttribute("dsloai", dsloai);
 		
 		ArrayList<donghobean> dsdongho;
@@ -60,6 +63,16 @@ public class hienthidonghoadmin extends HttpServlet {
 		}
 		else {
 			dsdongho = dhbo.getdongho();
+		}
+		
+		if (request.getAttribute("suathanhcong")!= null) {
+			request.setAttribute("suadongho", "true");
+		}
+		else if (request.getAttribute("xoadongho")!= null) {
+			request.setAttribute("xoadongho", "true");
+		}
+		else if (request.getAttribute("xoathatbai")!= null) {
+			request.setAttribute("xoathatbai", "true");
 		}
 		
 		session.setAttribute("dsdonghoadmin", dsdongho);

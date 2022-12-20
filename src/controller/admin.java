@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class admin
@@ -29,8 +30,13 @@ public class admin extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd =request.getRequestDispatcher("admin.jsp");
-		rd.forward(request, response);
+		HttpSession session =request.getSession();
+		if(session.getAttribute("admin")!=null) {
+			RequestDispatcher rd =request.getRequestDispatcher("admin.jsp");
+			rd.forward(request, response);
+		}
+		else response.sendRedirect("dangnhapadmin");
+		
 	}
 
 	/**

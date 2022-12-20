@@ -37,7 +37,7 @@
       <li ><a href="admin">Trang chủ</a></li>
       
       <li><a href="loaiadmin">Quản lý loại</a></li>
-      <li><a href="hienthidonghoadmin">Quản lý sách</a></li>
+      <li><a href="hienthidonghoadmin">Quản lý đồng hồ</a></li>
       <li><a href="xacnhanadmin">Xác nhận</a></li>
       <li  class="active"><a href="xacnhanchuyentienadmin">danh sách chuyển tiền</a></li>
     </ul>
@@ -49,13 +49,14 @@
        Login
        </a>
        <%}else{ %>
-       <a href="#">
+       <span class="login">
 	      <span class="glyphicon glyphicon-log-in"></span>
 	       Hi: <%
 	       adminbean kh =(adminbean) session.getAttribute("admin");
 	        out.print(kh.getTenDangNhap());
 	       %>
-	       </a>
+	       <a></a>
+	   </span>
 	       <%} %>
        </li>
     </ul>
@@ -63,6 +64,13 @@
 </nav>
   
 <table class="table table-hover" >
+	<tr>
+		<td>Họ tên</td>
+		<td>Tên đồng hồ</td>
+		<td>Số lượng mua</td>
+		<td>Giá</td>
+		<td>Thành tiền</td>
+	</tr>
    <%ArrayList<xacnhanadminbean> ds=(ArrayList<xacnhanadminbean>)request.getAttribute("dsxn");
      for(xacnhanadminbean xn: ds){
    %>

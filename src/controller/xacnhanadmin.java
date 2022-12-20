@@ -32,17 +32,13 @@ public class xacnhanadmin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session =request.getSession();
-		if(session.getAttribute("admin")!=null) {
-			xacnhanadminbo xnbo = new xacnhanadminbo();
-			if (request.getParameter("mct") != null) {
-				xnbo.xacnhan(Long.parseLong(request.getParameter("mct")));
-			}
-			request.setAttribute("ds", xnbo.getdanhsach());
-			RequestDispatcher rd=request.getRequestDispatcher("xacnhanadmin.jsp");
-			rd.forward(request, response);
+		xacnhanadminbo xnbo = new xacnhanadminbo();
+		if (request.getParameter("mct") != null) {
+			xnbo.xacnhan(Long.parseLong(request.getParameter("mct")));
 		}
-		else response.sendRedirect("dangnhapadmin");
+		request.setAttribute("ds", xnbo.getdanhsach());
+		RequestDispatcher rd=request.getRequestDispatcher("xacnhanadmin.jsp");
+		rd.forward(request, response);
 	}
 
 	/**

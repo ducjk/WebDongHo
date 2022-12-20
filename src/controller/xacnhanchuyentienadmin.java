@@ -33,14 +33,10 @@ public class xacnhanchuyentienadmin extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session =request.getSession();
-		if(session.getAttribute("admin")!=null) {
-			xacnhanadminbo xnbo=new xacnhanadminbo();
-			request.setAttribute("dsxn", xnbo.getdsxn());
-			RequestDispatcher rd=request.getRequestDispatcher("xacnhanchuyentien.jsp");
-			rd.forward(request, response);
-		}
-		else response.sendRedirect("dangnhapadmin");
+		xacnhanadminbo xnbo=new xacnhanadminbo();
+		request.setAttribute("dsxn", xnbo.getdsxn());
+		RequestDispatcher rd=request.getRequestDispatcher("xacnhanchuyentien.jsp");
+		rd.forward(request, response);
 	}
 
 	/**

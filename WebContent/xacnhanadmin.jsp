@@ -37,7 +37,7 @@
       <li ><a href="admin">Trang chủ</a></li>
       
       <li><a href="loaiadmin">Quản lý loại</a></li>
-      <li><a href="hienthidonghoadmin">Quản lý sách</a></li>
+      <li><a href="hienthidonghoadmin">Quản lý đồng hồ</a></li>
       <li class="active"><a href="xacnhanadmin">Xác nhận</a></li>
       <li><a href="xacnhanchuyentienadmin">danh sách chuyển tiền</a></li>
     </ul>
@@ -62,6 +62,13 @@
   </div>
 </nav>
 <table class="table table-hover" >
+	<tr>
+		<td>Họ tên</td>
+		<td>Tên đồng hồ</td>
+		<td>Số lượng mua</td>
+		<td>Giá</td>
+		<td>Thành tiền</td>
+	</tr>
    <%ArrayList<xacnhanadminbean> ds=(ArrayList<xacnhanadminbean>) request.getAttribute("ds");
      for(xacnhanadminbean xn: ds){
    %>

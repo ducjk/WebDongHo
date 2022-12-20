@@ -138,25 +138,25 @@
       
           <div class="form-group">
             <label for="fullname" class="form-label">Họ và tên</label>
-            <input id="fullname" name="fullname" type="text" placeholder="VD:Duc Huynh" class="form-control" value=<%=kh != null ? kh.getHoten(): "" %>>
+            <input id="fullname" name="fullname" type="text" placeholder="VD:Duc Huynh" class="form-control" value="<%=kh != null ? kh.getHoten(): "" %>">
             <span class="form-message"></span>
           </div>
       
           <div class="form-group">
             <label for="email" class="form-label">Email</label>
-            <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control" value=<%=kh != null ? kh.getEmail() : "" %>>
+            <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control" value="<%=kh != null ? kh.getEmail() : "" %>">
             <span class="form-message"></span>
           </div>
       
       	  <div class="form-group">
             <label for="address" class="form-label">Địa chỉ</label>
-            <input id="address" name="address" type="text" placeholder="31 An Duong Vuong, Huế" class="form-control" value=<%=kh != null ? kh.getDiachi() : "" %>>
+            <input id="address" name="address" type="text" placeholder="31 An Duong Vuong, Huế" class="form-control" value="<%=kh != null ? kh.getDiachi() : "" %>">
             <span class="form-message"></span>
           </div>
       
           <div class="form-group">
             <label for="phone" class="form-label">SĐT</label>
-            <input id="phone" name="phone" type="phone" placeholder="09XXXXXX" class="form-control" value=<%=kh != null ? kh.getSdt() : "" %>>
+            <input id="phone" name="phone" type="phone" placeholder="09XXXXXX" class="form-control" value="<%=kh != null ? kh.getSdt() : "" %>">
             <span class="form-message"></span>
           </div>
           <span class="total">Tổng Tiền: <strong><%=gh.TongTien() %></strong></span>

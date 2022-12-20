@@ -5,7 +5,6 @@
 <head>
 	<title>Admin</title>
 	<meta charset="utf-8">
-	<title>Insert title here</title>
 	<style>
 		* {
     padding: 0;

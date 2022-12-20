@@ -41,6 +41,9 @@ public class dangnhapadmin extends HttpServlet {
 			  if(dn!=null){//Dang nhap dung
 				  //Tao doi tuong session
 				  HttpSession session=request.getSession();
+				  if(session.getAttribute("admin") == null) {
+					  session.setAttribute("admin", null);
+				  }
 				  session.setAttribute("admin", dn);
 				  response.sendRedirect("admin");
 			  }else {//Dang nhap sai

@@ -272,21 +272,19 @@
                     <div class="col l-10 m-12 c-12">
                         <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
-                            <button class="home-filter__btn btn">Phổ biến</button>
-                            <button class="home-filter__btn btn btn-primary">Mới nhất</button>
-                            <button class="home-filter__btn btn">Bán chạy</button>
+                            <button class="home-filter__btn btn btn-primary">Tất cả</button>
 
                             <div class="select-input">
                                 <span class="select-input__label">Giá</span>
                                 <i class="fas fa-angle-down select-input__icon"></i>
-                                <ul class="select-input__list">
+                                <ul class="select-input__list" style="top: 24px;">
                                     <li class="select-input__item">
-                                        <a href="" class="select-input__item-link">
+                                        <a href="htdongho?sortreverse=true" class="select-input__item-link">
                                             Giá: Thấp đến Cao
                                         </a>
                                     </li>
                                     <li class="select-input__item">
-                                        <a href="" class="select-input__item-link">
+                                        <a href="htdongho?sortpopulla=true" class="select-input__item-link">
                                             Giá: Cao đến Thấp
                                         </a>
                                     </li>
